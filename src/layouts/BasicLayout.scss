@@ -1,0 +1,94 @@
+.basic-layout {
+  .ant-layout {
+    min-height: 100vh;
+  }
+
+  aside {
+    box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+
+    .logo {
+      height: 32px;
+      background: rgba(255, 255, 255, 0.2);
+      margin: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+  }
+
+  .ant-layout-header {
+    box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+    color: #666;
+
+    button {
+      display: inline-block;
+      min-width: 50px;
+
+      &.ant-popover-open,
+      &.ant-dropdown-open,
+      &:hover {
+        background: rgba(0, 0, 0, 0.03);
+      }
+    }
+
+    .trigger {
+      font-size: 18px;
+      line-height: 64px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .trigger:hover {
+      color: #1890ff;
+    }
+
+    .infomation {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    #btn-profile {
+      padding: 0 10px;
+
+      .name {
+        font-size: 1.4rem;
+      }
+
+      .ant-avatar {
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .ant-breadcrumb {
+    padding: 24px 24px 0 24px;
+    margin-bottom: 8px;
+  }
+
+  .ant-layout-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 25px 0 25px;
+    min-height: 300px;
+
+    padding: 24px 20px;
+    background: #fff;
+
+    h3 {
+      font-size: 2.2rem;
+    }
+  }
+
+  .ant-table-pagination.ant-pagination {
+    float: none;
+    text-align: center;
+  }
+
+  .ant-layout-footer {
+    padding: 15px 0;
+    text-align: center;
+    color: $font-color-weak;
+  }
+}
