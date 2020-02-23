@@ -26,7 +26,6 @@ module.exports = {
       layouts: srcPath + '/layouts',
       modules: srcPath + '/modules',
       pages: srcPath + '/pages',
-      store: srcPath + '/store',
     },
   },
 

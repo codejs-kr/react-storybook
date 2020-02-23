@@ -1,39 +1,73 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import Dialog from '../src/components/Dialog';
 import Button from '../src/components/Button';
 
 export default {
-  title: 'Button',
-  component: Button,
+  title: 'Dialog',
+  component: Dialog,
 };
 
-export const Size = () => {
+export const Default = () => {
+  const onConfirm = (e) => {
+    alert('확인');
+    e.preventDefault();
+  };
+
+  const onCancel = (e) => {
+    alert('취소');
+    e.preventDefault();
+  };
+
   return (
-    <Fragment>
-      <div>
-        <Button size="small">small</Button>
-      </div>
-      <div>
-        <Button>normal</Button>
-      </div>
-      <div>
-        <Button size="large">large</Button>
-      </div>
-    </Fragment>
+    <Dialog type="default" title="Title">
+      <main>내용입니다</main>
+      <footer>
+        <Button size="normal" color="sub" onClick={onCancel}>
+          취소
+        </Button>
+        <Button size="normal" color="primary" onClick={onConfirm}>
+          확인
+        </Button>
+      </footer>
+    </Dialog>
   );
 };
 
-export const Color = () => {
+export const HiddenTitle = () => {
+  const onConfirm = (e) => {
+    alert('확인');
+    e.preventDefault();
+  };
+
+  const onCancel = (e) => {
+    alert('취소');
+    e.preventDefault();
+  };
+
   return (
-    <Fragment>
-      <div>
-        <Button color="primary">primary</Button>
-      </div>
-      <div>
-        <Button color="sub">sub</Button>
-      </div>
-      <div>
-        <Button color="outline">outline</Button>
-      </div>
-    </Fragment>
+    <Dialog type="default">
+      <main>내용입니다</main>
+      <footer>
+        <Button size="normal" color="sub" onClick={onCancel}>
+          취소
+        </Button>
+        <Button size="normal" color="primary" onClick={onConfirm}>
+          확인
+        </Button>
+      </footer>
+    </Dialog>
+  );
+};
+
+export const Alert = () => {
+  const onConfirm = (e) => {
+    alert('Confirm Alert');
+    e.preventDefault();
+  };
+
+  return (
+    <Dialog type="alert" onClick={onConfirm}>
+      <main>담았어요!</main>
+    </Dialog>
   );
 };
