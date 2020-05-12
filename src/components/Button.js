@@ -38,8 +38,8 @@ const ButtonSC = styled.button`
   }
 `;
 
-const Button = ({ children = '버튼', type = 'button', size = 'normal', color = 'primary', onClick = () => {} }) => {
-  const className = `${size} ${color}`;
+const Button = ({ children = '버튼', type = 'button', size = 'normal', style = 'primary', onClick = () => {} }) => {
+  const className = `${size} ${style}`;
 
   return (
     <ButtonSC type={type} className={className} onClick={onClick}>

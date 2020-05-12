@@ -22,7 +22,7 @@ export const Size = () => {
   );
 };
 
-export const Color = () => {
+export const Style = () => {
   return (
     <Fragment>
       <div>
