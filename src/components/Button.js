@@ -1,5 +1,4 @@
 import React from 'react';
-// import './Button.scss';
 import styled from 'styled-components';
 
 const ButtonSC = styled.button`
