@@ -13,7 +13,7 @@ module.exports = {
       use: ['style-loader', 'css-loader', 'sass-loader'],
     });
 
-    // Set style asset alias
+    // Set alias root for asset
     config.resolve.modules.push(path.resolve(__dirname, '../src'));
 
     // Return the altered config
